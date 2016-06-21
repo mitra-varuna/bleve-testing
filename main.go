@@ -18,7 +18,7 @@ func main() {
 	index, err := bleve.New("example.bleve", mapping)
 
 	if err == bleve.ErrorIndexPathExists {
-
+		index, err = bleve.Open("example.bleve")
 	}
 
 	if err != nil {
