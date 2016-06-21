@@ -27,6 +27,8 @@ func main() {
 		return
 	}
 
+	defer index.Close()
+
 	newSchool := School{ID: 1, Name: "Test School", Description: "Test Description"}
 
 	err = index.Index("1", newSchool)
